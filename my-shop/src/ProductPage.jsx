@@ -1,7 +1,7 @@
 // src/ProductPage.jsx — Product detail page with stock indicator and add to cart
 import { useState, useEffect } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
-import { fetchProduct, fetchRelatedProducts, addToWishlist, removeFromWishlist, fetchWishlist, subscribeStockNotification } from "./api";
+import { fetchProduct, fetchRelatedProducts, addToWishlist, removeFromWishlist, fetchWishlist, subscribeStockNotification, BASE_URL } from "./api";
 import { useCart } from "./hooks/useCart";
 import { useToast } from "./hooks/useToast";
 import { useAuth } from "./hooks/useAuth";

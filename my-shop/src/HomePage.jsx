@@ -1,7 +1,7 @@
 // src/HomePage.jsx — Hero banner, featured products, category navigation
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { fetchProducts, fetchCategories, addToWishlist, removeFromWishlist, fetchWishlist } from "./api";
+import { fetchProducts, fetchCategories, addToWishlist, removeFromWishlist, fetchWishlist, BASE_URL } from "./api";
 import { useCart } from "./hooks/useCart";
 import { useToast } from "./hooks/useToast";
 import { useAuth } from "./hooks/useAuth";

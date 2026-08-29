@@ -4,7 +4,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { useCart } from "./hooks/useCart";
 import { useAuth } from "./hooks/useAuth";
 import { useToast } from "./hooks/useToast";
-import { submitOrder } from "./api";
+import { submitOrder, BASE_URL } from "./api";
 import LoadingSpinner from "./LoadingSpinner";
 import TrustBadges from "./TrustBadges";
 

@@ -1,7 +1,7 @@
 // src/WishlistPage.jsx — Wishlist page for logged-in users
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { fetchWishlist, removeFromWishlist } from "./api";
+import { fetchWishlist, removeFromWishlist, BASE_URL } from "./api";
 import { useAuth } from "./hooks/useAuth";
 import { useToast } from "./hooks/useToast";
 import LoadingSpinner from "./LoadingSpinner";

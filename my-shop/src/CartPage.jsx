@@ -2,6 +2,7 @@
 import { useNavigate, Link } from "react-router-dom";
 import { useCart } from "./hooks/useCart";
 import { useToast } from "./hooks/useToast";
+import { BASE_URL } from "./api";
 
 export default function CartPage() {
   const { cartItems, changeQty, clearCart, total, itemCount } = useCart();
