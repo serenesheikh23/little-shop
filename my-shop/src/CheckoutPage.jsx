@@ -116,7 +116,7 @@ export default function CheckoutPage() {
 
   const getImageUrl = (url) => {
     if (!url) return null;
-    return url.startsWith('http') ? url : `http://localhost:3000${url}`;
+    return url.startsWith('http') ? url : `${BASE_URL}${url}`;
   };
 
   if (cartItems.length === 0 && !orderResult) {

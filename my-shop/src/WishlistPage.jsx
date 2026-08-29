@@ -45,7 +45,7 @@ export default function WishlistPage() {
 
   const getImageUrl = (url) => {
     if (!url) return null;
-    return url.startsWith('http') ? url : `http://localhost:3000${url}`;
+    return url.startsWith('http') ? url : `${BASE_URL}${url}`;
   };
 
   if (authLoading) {

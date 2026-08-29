@@ -1,6 +1,7 @@
 // src/RecentlyViewed.jsx — Shows products the user has recently viewed
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { BASE_URL } from "./api";
 
 const STORAGE_KEY = "recently_viewed";
 const MAX_ITEMS = 8;
@@ -46,7 +47,7 @@ export default function RecentlyViewed({ currentProductId }) {
 
   const getImageUrl = (url) => {
     if (!url) return null;
-    return url.startsWith("http") ? url : `http://localhost:3000${url}`;
+    return url.startsWith("http") ? url : `${BASE_URL}${url}`;
   };
 
   return (

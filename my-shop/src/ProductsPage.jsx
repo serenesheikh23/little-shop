@@ -1,7 +1,7 @@
 // src/ProductsPage.jsx — Product listing with search, category filter, pagination
 import { useState, useEffect } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import { fetchProducts, fetchCategories, addToWishlist, removeFromWishlist, fetchWishlist } from "./api";
+import { fetchProducts, fetchCategories, addToWishlist, removeFromWishlist, fetchWishlist, BASE_URL } from "./api";
 import { useCart } from "./hooks/useCart";
 import { useToast } from "./hooks/useToast";
 import { useAuth } from "./hooks/useAuth";
@@ -72,7 +72,7 @@ export default function ProductsPage() {
 
   const getImageUrl = (url) => {
     if (!url) return null;
-    return url.startsWith("http") ? url : `http://localhost:3000${url}`;
+    return url.startsWith("http") ? url : `${BASE_URL}${url}`;
   };
 
   const handleAddToCart = async (product, e) => {

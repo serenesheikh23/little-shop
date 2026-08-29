@@ -1,5 +1,8 @@
 // src/api.js — API client with JWT support
-const API_URL = "http://localhost:3000/api";
+const API_URL = `${import.meta.env.VITE_API_URL}/api`;
+const BASE_URL = import.meta.env.VITE_API_URL;
+
+export { BASE_URL };
 
 let authToken = null;
 

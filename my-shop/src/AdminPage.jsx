@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Link, Navigate } from "react-router-dom";
 import { useAuth } from "./hooks/useAuth";
 import { useToast } from "./hooks/useToast";
-import { fetchProducts, fetchCategories, createProduct, updateProduct, deleteProduct, fetchAdminStats } from "./api";
+import { fetchProducts, fetchCategories, createProduct, updateProduct, deleteProduct, fetchAdminStats, BASE_URL } from "./api";
 import LoadingSpinner from "./LoadingSpinner";
 
 export default function AdminPage() {
@@ -39,7 +39,7 @@ export default function AdminPage() {
 
   const getImageUrl = (url) => {
     if (!url) return null;
-    return url.startsWith("http") ? url : `http://localhost:3000${url}`;
+    return url.startsWith("http") ? url : `${BASE_URL}${url}`;
   };
 
   const handleSubmit = async (e) => {
